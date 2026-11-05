@@ -46,6 +46,11 @@ var dbInstance db.DbIf
 
 func TestDb(t *testing.T) {
 	t.Run("Bbolt DB", testBboltDb)
+
+	t.Run("Custom DB", func(t *testing.T) {
+		t.Skip("Custom DB is not implemented yet")
+		testCustomDb(t)
+	})
 }
 
 func testBboltDb(t *testing.T) {
